@@ -30,7 +30,7 @@ dukpy==0.2.3
 easygui==0.98.3
 entrypoints==0.4
 ephem==4.1.4
-filelock==3.7.1
+filelock==3.8.0
 Flask==2.2.2
 fonttools==4.33.3
 frozendict==2.3.7
