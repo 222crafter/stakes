@@ -78,8 +78,8 @@ pexpect==4.8.0
 Pillow==8.4.0
 pkginfo==1.8.3
 platformdirs==2.5.2
-poetry==1.1.14
-poetry-core==1.0.8
+poetry==1.4.2
+poetry-core==1.5.2
 protobuf==3.20.3
 ptyprocess==0.7.0
 pyarrow==11.0.0
@@ -107,7 +107,7 @@ tensorboard==1.12.2
 tensorflow @ https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.12.0-py3-none-any.whl
 termcolor==2.1.0
 tf==1.0.0
-tkdesigner==1.0.4
+tkdesigner==1.0.7
 toml==0.10.2
 tomlkit==0.11.1
 toolz==0.12.0
