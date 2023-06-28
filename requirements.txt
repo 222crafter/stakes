@@ -3,3 +3,4 @@ prophet
 streamlit
 datetime
 altair
+numpy
