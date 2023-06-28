@@ -1,25 +1,30 @@
 import streamlit as st
 import yfinance as yf
 import matplotlib.pyplot as plt
+import numpy as np
 
 def plot_stock_prices(symbol, days, prediction_days):
+    # Fetch historical data
     stock = yf.Ticker(symbol)
     history = stock.history(period='1d', interval='1d', start=None, end=None)
     prices = history['Close'].values
 
-    actual_days = days + prediction_days
-    actual_prices = prices[-actual_days:-prediction_days]
+    # Prepare data for plotting
+    actual_days = np.arange(days)
+    actual_prices = prices[-days:-prediction_days]
     predicted_prices = prices[-prediction_days:]
 
+    # Create the plot
     plt.figure(figsize=(12, 6))
-    plt.plot(range(actual_days), actual_prices, label='Actual')
-    plt.plot(range(days, actual_days), predicted_prices, label='Prediction')
+    plt.plot(actual_days, actual_prices, label='Actual')
+    plt.plot(np.arange(days, days+prediction_days), predicted_prices, label='Prediction')
     plt.xlabel('Days')
     plt.ylabel('Price')
     plt.title(f'{symbol} Price Trend')
     plt.legend()
     plt.grid(True)
 
+    # Return the plot
     return plt
 
 def main():
